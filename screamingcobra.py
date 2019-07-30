@@ -15,10 +15,11 @@ print("""
 |___/\___|_|  \___|\__,_|_| |_| |_|_|_| |_|\__, |  \___\___/|_.__/|_|  \__,_|
                                             __/ |                            
                                            |___/                             
-[+] Automatic XSS fuzzer	                                       
-[+] Programmer: Shadab Siddiqui
-[+] Coder by Haroon Awan
-[+] Linux Version
+	 			XSS fuzzer swiss knife	                                       
+
+[+] Programmer : Shadab Siddiqui
+[+] Coder      : Haroon Awan
+[+] Version    : Linux
 """)
 
 # Config
@@ -107,7 +108,7 @@ if __name__ == '__main__':
     param_dict = dict()
     for param_parse_entry in param_parse_list:
 #        tmp = param_parse_entry.split('=')
-        tmp = param_parse_entry.split()
+        tmp = param_parse_entry.split(" ")
         param_dict[tmp[0]] = tmp[0]
         # Loop through payloads
     for payload in payloads:
