@@ -59,7 +59,7 @@ def attack(url, payload):
         attack= urllib2.urlopen(url).read()
         index = attack.find(XSS_RESPONSE)
         buffer = 20
-        print_url=url.replace("<","<").replace(">",">")
+        print_url=url.replace("<","<").replace(">",">").replace("#","#")
         attack = attack.split("\n");
         len(attack)
 
