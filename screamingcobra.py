@@ -1,8 +1,14 @@
 #!/usr/bin/env python
 # coding: latin-1
+# -*- coding: utf-8 -*-
+# coding: utf-8
+# coding: UTF-8
+# coding: UTF-16
+# coding: utf-16
+
 
 # Imports
-import sys, httplib2, re, requests, urllib2, urlparse, json, time, httplib, cookielib, urllib, httplib, urllib, socket, urlparse, os, sys, time, mechanize 
+import html, sys, httplib2, re, requests, urllib2, urlparse, json, time, httplib, cookielib, urllib, httplib, urllib, socket, urlparse, os, sys, time, mechanize 
 from threadpool import *
 from termcolor import colored
 
@@ -19,11 +25,15 @@ none_ascii = '''
   ╚════██║██║     ██╔══██╗██╔══╝  ██╔══██║██║╚██╔╝██║██║██║╚██╗██║██║   ██║    ██║     ██║   ██║██╔══██╗██╔══██╗██╔══██║
   ███████║╚██████╗██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║╚██████╔╝    ╚██████╗╚██████╔╝██████╔╝██║  ██║██║  ██║
   ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-                                                                                                                        
+                                                                                XSS Fuzz Swiss Knife,   version 1.0                                        
 '''
 #""")
 print(none_ascii.decode('utf-8'))
 
+# Information
+print colored('[+] ', 'red'), colored('Coder: Haroon Awan', 'white')
+print colored('[+] ', 'red'), colored('fb   : officialharoonawan', 'white')
+print colored('[+] ', 'red'), colored('Insta: hackeruniversee', 'white')
 
 # Configurations
 DEBUG = True
@@ -46,13 +56,14 @@ def attack(url, payload):
         attack= urllib2.urlopen(url).read()
         index = attack.find(XSS_RESPONSE)
         buffer = 20
-        print_url=url.replace("<","&lt")
+        print_url=url.replace("<","<").replace(">",">")
         attack = attack.split("\n");
         len(attack)
         
         if index != -1:
             return_dict[' vulnerability'] = True
-            print colored('[+] ', 'red'), colored('Reflection Found, do confirm manually', 'green'),print_url
+            print colored('[+] ', 'red'), colored('Reflection Found, do confirm manually', 'green')
+            print print_url
             return_dict['vulnerability_data'] = line.strip()
             print "[+] Reflection Found, manually confirm\n", attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
             intt=intt+1
