@@ -7,8 +7,6 @@ from threadpool import *
 os.system('clear')
 
 print("""      
-
-
                                    _                         _               
                                   (_)                       | |              
  ___  ___ _ __ ___  __ _ _ __ ___  _ _ __   __ _    ___ ___ | |__  _ __ __ _ 
@@ -17,12 +15,10 @@ print("""
 |___/\___|_|  \___|\__,_|_| |_| |_|_|_| |_|\__, |  \___\___/|_.__/|_|  \__,_|
                                             __/ |                            
                                            |___/                             
-                                            
-: Notorious fuzzer for performing xss on any given URI
-: Programmer: Shadab Siddiqui
-: Coder by Haroon Awan
-: Linux Version
-
+[+] Automatic XSS fuzzer	                                       
+[+] Programmer: Shadab Siddiqui
+[+] Coder by Haroon Awan
+[+] Linux Version
 """)
 
 # Config
@@ -61,8 +57,8 @@ def attack(url, payload):
         if index != -1:
             return_dict[' vulnerability'] = True
             return_dict['vulnerability_data'] = line.strip()
-            print "[+] Reflection Found, manually confirm\n", attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
-            print " [!] URL: \n",print_url
+            print "[+] Reflection Found, manually confirm", attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
+            print " [!] URL: ",print_url
             intt=intt+1
             print intt
     #        break
@@ -90,13 +86,13 @@ if __name__ == '__main__':
 
     # Load SITES and PAYLOADS files
 #    sites = []
-#    input = str(raw_input(" [+] Enter Absolute URL: "))
-    sites = str(raw_input(" [+] Enter Absolute URI: "))
+#    input = str(raw_input("[+] Enter Absolute URL: "))
+    sites = str(raw_input("[+] Enter Absolute URI: "))
 #    sites = input
 #    input = sites
-    print " [+] Loaded Parallel Engine"
-    print " [+] Loaded Payloads"
-    print " [+] Running test ..."
+    print "[+] Loaded Parallel Engine"
+    print "[+] Loaded Payloads"
+    print "[+] Running tests ..."
     payloads = []
     for payload in payloads_file:
         payloads.append(payload[:-1])
@@ -150,6 +146,6 @@ if __name__ == '__main__':
     #if DEBUG:
     #print "int->",int
     if(intt == 0):
-        print " [!] Specified URI is not vulernable "
-    print ' [!] Time taken for parallel scann : %.2f seconds' % (t_global_end - t_global_start)
+        print "[!] Specified URI is not vulernable "
+    print '[!] Time taken for parallel scann : %.2f seconds' % (t_global_end - t_global_start)
 
