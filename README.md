@@ -1,3 +1,5 @@
+# F.A.Q
+
 # ScreamingCobra
 - Notorious fuzzer
 - Swiss knife when performing xss on any given URI
