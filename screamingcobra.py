@@ -1,12 +1,31 @@
 #!/usr/bin/env python
+# coding: latin-1
 
 # Imports
 import sys, httplib2, re, requests, urllib2, urlparse, json, time, httplib, cookielib, urllib, httplib, urllib, socket, urlparse, os, sys, time, mechanize 
 from threadpool import *
 from termcolor import colored
 
-# Configurations
+# Clear system terminal
 os.system("clear")
+
+#print(r"""\
+none_ascii = '''
+
+
+  ███████╗ ██████╗██████╗ ███████╗ █████╗ ███╗   ███╗██╗███╗   ██╗ ██████╗      ██████╗ ██████╗ ██████╗ ██████╗  █████╗ 
+  ██╔════╝██╔════╝██╔══██╗██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔════╝     ██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔══██╗
+  ███████╗██║     ██████╔╝█████╗  ███████║██╔████╔██║██║██╔██╗ ██║██║  ███╗    ██║     ██║   ██║██████╔╝██████╔╝███████║
+  ╚════██║██║     ██╔══██╗██╔══╝  ██╔══██║██║╚██╔╝██║██║██║╚██╗██║██║   ██║    ██║     ██║   ██║██╔══██╗██╔══██╗██╔══██║
+  ███████║╚██████╗██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║╚██████╔╝    ╚██████╗╚██████╔╝██████╔╝██║  ██║██║  ██║
+  ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                                                                                                                        
+'''
+#""")
+print(none_ascii.decode('utf-8'))
+
+
+# Configurations
 DEBUG = True
 MAX_THREAD_COUNT = 10
 PAYLOADS_FILENAME = 'payloads'
@@ -52,7 +71,7 @@ if __name__ == '__main__':
     payloads_file = open(PAYLOADS_FILENAME)
     threadpool = ThreadPool(MAX_THREAD_COUNT)
     print colored('[+] ', 'red'), colored('Enter Absolute URI:', 'green')
-    sites = str(raw_input(""))
+    sites = str(raw_input("[-]  "))
     print colored('[+] ', 'red'), colored('Loaded Parallel Engine', 'green')
     print colored('[+] ', 'red'), colored('Loaded Payloads', 'green')
     print colored('[+] ', 'red'), colored('Performing Tests', 'green')
