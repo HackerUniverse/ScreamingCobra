@@ -27,11 +27,14 @@
 # Compatible
 - Android Led TV, Termux, Linux, Windows
 
-# Running
-- python screamingcobra.py
-
-# Example Payloads
+# URI Payloads
+- Parameter :
 - https://example.com.pk/pages.php?id=
+
+- Fuzzing :
+- https://example.com.pk/pages.php?id=id=id=id=
+
+- Exclusives :
 - https://example.com.pk/pages.php#
 - https://example.com.pk/pages/
 - https://example.com.pk/pages.php?id#
