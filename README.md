@@ -13,9 +13,16 @@
     <img src="https://i.ibb.co/crBQTYN/screamingcobra.png" width="600px"</img> 
 </div>
 
-# Installation
+# Linux Installation
 - pip install -r requirements.txt 
-- Python 2.7.16
+- pip install httplib2
+- pip install mechanize
+- pip install Python 2.7
+
+# Android Installation
+- pip2 install -e requirements.txt
+- pip2 install httplib2
+- pip2 install mechanize
 
 # Compatible
 - Android Led TV, Termux, Linux, Windows
