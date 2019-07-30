@@ -64,13 +64,17 @@ def attack(url, payload):
         len(attack)
 
         if index != -1:
-            return_dict[' vulnerability'] = True
-            print colored('[-] ', 'red'), colored('Found XSS', 'white'), print_url
-            #print "[-] Found XSS: \n",print_url
-            return_dict['vulnerability_data'] = line.strip()
-            #print colored('[+] ', 'red'), colored('XSS Found: ', 'green'), attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
-            intt=intt+1
-            print intt
+            return_dict[' vulnerability'] = True            
+            print colored('[-] ', 'red'), colored('Vulernerable', 'white'), print_url            
+            return_dict['vulnerability_data'] = line.strip()            
+            intt=intt+1                        
+            print intt            
+        else: 
+		return_dict['vulnerability'] = False        
+        print colored('[-] ', 'red'), colored('Not Vulernerable', 'white'), print_url        
+        return_dict['vulnerability_data'] = line.strip()        
+        intt=intt+1                        
+        print intt                
             
         t_end = time.time()
         return_dict['time'] = round((t_end - t_start), 2)
@@ -87,7 +91,7 @@ if __name__ == '__main__':
     payloads_file = open(PAYLOADS_FILENAME)
     threadpool = ThreadPool(MAX_THREAD_COUNT)
     print colored('[+] ', 'red'), colored('Enter Absolute URI:', 'green')
-    sites = str(raw_input("[-]  "))
+    sites = str(raw_input("[-]  "))    
     print colored('[+] ', 'red'), colored('Loaded Parallel Engine', 'green')
     print colored('[+] ', 'red'), colored('Loaded Payloads', 'green')
     print colored('[+] ', 'red'), colored('Performing XSS Tests', 'green')
@@ -100,10 +104,10 @@ if __name__ == '__main__':
     base_url = '%s%s%s%s' % (parse_url.scheme, SCHEME_DELIMITER, parse_url.netloc, parse_url.path)
 
 #print base_url
-    param_parse_list = urlparse.urlparse(sites)[4].split()
+    param_parse_list = urlparse.urlparse(sites)[4].split(' ')
     param_dict = dict()
     for param_parse_entry in param_parse_list:
-        tmp = param_parse_entry.split()
+        tmp = param_parse_entry.split(' ')
         param_dict[tmp[0]] = tmp[0]
 
 # Loop through payloads
