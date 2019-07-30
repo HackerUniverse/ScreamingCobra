@@ -15,9 +15,7 @@ from termcolor import colored
 # Clear system terminal
 os.system("clear")
 
-#print(r"""\
 none_ascii = '''
-
 
   ███████╗ ██████╗██████╗ ███████╗ █████╗ ███╗   ███╗██╗███╗   ██╗ ██████╗      ██████╗ ██████╗ ██████╗ ██████╗  █████╗ 
   ██╔════╝██╔════╝██╔══██╗██╔════╝██╔══██╗████╗ ████║██║████╗  ██║██╔════╝     ██╔════╝██╔═══██╗██╔══██╗██╔══██╗██╔══██╗
@@ -25,15 +23,18 @@ none_ascii = '''
   ╚════██║██║     ██╔══██╗██╔══╝  ██╔══██║██║╚██╔╝██║██║██║╚██╗██║██║   ██║    ██║     ██║   ██║██╔══██╗██╔══██╗██╔══██║
   ███████║╚██████╗██║  ██║███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚████║╚██████╔╝    ╚██████╗╚██████╔╝██████╔╝██║  ██║██║  ██║
   ╚══════╝ ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝      ╚═════╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-                                                                                XSS Fuzz Swiss Knife,   version 1.0                                        
-'''
-#""")
+                                                                                XSS Fuzz Swiss Knife,   version 1.0'''
+print "" # Information
+print colored('[   Coder    ]', 'red'), colored(' Haroon Awan', 'white')
+print colored('[  Contact   ] ', 'red'), colored('mrharoonawan@gmail.com', 'white')
+print colored('[ Instagram  ] ', 'red'), colored('hackeruniversee, hackerfromscratch', 'white')
+print colored('[  Facebook  ] ', 'red'), colored('Https://www.facebook.com/officialharoonawan', 'white')
+print colored('[   Github   ] ', 'red'), colored('Https://www.github.com/haroonawanofficial', 'white')
+
 print(none_ascii.decode('utf-8'))
 
-# Information
-print colored('[+] ', 'red'), colored('Coder: Haroon Awan', 'white')
-print colored('[+] ', 'red'), colored('fb   : officialharoonawan', 'white')
-print colored('[+] ', 'red'), colored('Insta: hackeruniversee', 'white')
+# Target
+print colored('[+] ', 'red'), colored('Target Settings', 'white')
 
 # Configurations
 DEBUG = True
@@ -62,10 +63,10 @@ def attack(url, payload):
         
         if index != -1:
             return_dict[' vulnerability'] = True
-            print colored('[+] ', 'red'), colored('Reflection Found, do confirm manually', 'green')
+            print colored('[+] ', 'red'), colored('XSS Found: ', 'green')
             print print_url
             return_dict['vulnerability_data'] = line.strip()
-            print "[+] Reflection Found, manually confirm\n", attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
+            print colored('[+] ', 'red'), colored('XSS Found: ', 'green'), attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
             intt=intt+1
             print intt
         t_end = time.time()
@@ -74,6 +75,7 @@ def attack(url, payload):
         sys.exit(0)
     except Exception, e:
         return_dict['exception'] = str(e)
+
 
 if __name__ == '__main__':
     # Init
@@ -85,7 +87,7 @@ if __name__ == '__main__':
     sites = str(raw_input("[-]  "))
     print colored('[+] ', 'red'), colored('Loaded Parallel Engine', 'green')
     print colored('[+] ', 'red'), colored('Loaded Payloads', 'green')
-    print colored('[+] ', 'red'), colored('Performing Tests', 'green')
+    print colored('[+] ', 'red'), colored('Performing XSS Tests', 'green')
     payloads = []
     for payload in payloads_file:
         payloads.append(payload[:-1])
