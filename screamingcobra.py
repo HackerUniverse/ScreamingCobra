@@ -51,23 +51,26 @@ def attack(url, payload):
     return_dict = dict()
     return_dict['url'] = url
     return_dict['vulnerability'] = False
+
     try:
         return_dict['method'] = 'GET'
         XSS_RESPONSE=payload
         attack= urllib2.urlopen(url).read()
         index = attack.find(XSS_RESPONSE)
         buffer = 20
-        print_url=url.replace("<","<")
+        print_url=url.replace("<","<").replace(">",">")
         attack = attack.split("\n");
         len(attack)
+
         if index != -1:
             return_dict[' vulnerability'] = True
+            print colored('[-] ', 'red'), colored('Found XSS', 'white'), print_url
+            #print "[-] Found XSS: \n",print_url
             return_dict['vulnerability_data'] = line.strip()
-            print colored('[+] ', 'red'), colored('XSS Found: ', 'green'), attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
-            print colored('[+] ', 'red'), colored('XSS Found: ', 'green')
-            print print_url
+            #print colored('[+] ', 'red'), colored('XSS Found: ', 'green'), attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
             intt=intt+1
             print intt
+            
         t_end = time.time()
         return_dict['time'] = round((t_end - t_start), 2)
     except KeyboardInterrupt, ke:
