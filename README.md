@@ -1,15 +1,14 @@
 # F.A.Q
 
 # ScreamingCobra
-- Notorious fuzzer
-- Swiss knife when performing xss on any given URI
+- Swiss knife for XSS Fuzzing on any given URI
 
 # License
 - EULA
 
 # Screenshot
 <div align="center">
-    <img src="http://oi66.tinypic.com/6oog00.jpg" width="600px"</img> 
+    <img src="http://oi68.tinypic.com/e7ml5e.jpg" width="600px"</img> 
 </div>
 
 # Installation
