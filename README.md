@@ -2,7 +2,7 @@
 
 # ScreamingCobra
 - Swiss knife for XSS on any URI
-- Fuzz / Find
+- XSS Fuzzer & Finder
 - Any logic is valid logic in this software
 
 # License
