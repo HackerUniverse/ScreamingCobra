@@ -26,6 +26,7 @@ none_ascii = '''
                                                                                 XSS Fuzz Swiss Knife,   version 1.0'''
 print "" # Information
 print colored('[   Coder    ]', 'red'), colored(' Haroon Awan', 'white')
+print colored('[ Programmer ]', 'red'), colored(' Shadab Siddique', 'white')
 print colored('[  Contact   ] ', 'red'), colored('mrharoonawan@gmail.com', 'white')
 print colored('[ Instagram  ] ', 'red'), colored('hackeruniversee, hackerfromscratch', 'white')
 print colored('[  Facebook  ] ', 'red'), colored('Https://www.facebook.com/officialharoonawan', 'white')
