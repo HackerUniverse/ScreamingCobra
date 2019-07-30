@@ -10,7 +10,7 @@
 
 # Screenshot
 <div align="center">
-    <img src="http://oi68.tinypic.com/e7ml5e.jpg" width="600px"</img> 
+    <img src="https://i.ibb.co/crBQTYN/screamingcobra.png" width="600px"</img> 
 </div>
 
 # Installation
