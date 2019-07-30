@@ -15,7 +15,7 @@ print("""
 |___/\___|_|  \___|\__,_|_| |_| |_|_|_| |_|\__, |  \___\___/|_.__/|_|  \__,_|
                                             __/ |                            
                                            |___/                             
-	 			XSS fuzzer swiss knife	                                       
+	 			swiss knife for XSS fuzzing 	                                       
 
 [+] Programmer : Shadab Siddiqui
 [+] Coder      : Haroon Awan
