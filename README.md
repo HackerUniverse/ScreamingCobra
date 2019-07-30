@@ -1,5 +1,14 @@
 # ScreamingCobra
-Notorious fuzzer for performing xss on any given URI
+- Notorious fuzzer
+- Swiss knife when performing xss on any given URI
+
+# License
+- EULA
+
+# Screenshot
+<div align="center">
+    <img src="http://oi66.tinypic.com/6oog00.jpg" width="600px"</img> 
+</div>
 
 # Installation
 - pip install -r requirements.txt 
