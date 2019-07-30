@@ -113,7 +113,7 @@ if __name__ == '__main__':
 #    input = sites
     print "[+] Loaded Parallel Engine"
     print "[+] Loaded Payloads"
-    print "[+] Running tests ..."
+    print "[+] Performing tests"
     payloads = []
     for payload in payloads_file:
         payloads.append(payload[:-1])
@@ -168,5 +168,5 @@ if __name__ == '__main__':
     #print "int->",int
     if(intt == 0):
         print "[!] Specified URI is not vulernable "
-    print '[!] Time taken for parallel scann : %.2f seconds' % (t_global_end - t_global_start)
+    print '[!] Time taken for parallel scan : %.2f seconds' % (t_global_end - t_global_start)
 
