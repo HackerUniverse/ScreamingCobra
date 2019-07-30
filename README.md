@@ -1,9 +1,9 @@
 # F.A.Q
 
 # ScreamingCobra
-- Swiss knife for XSS Fuzzing on any given URI
-- Swiss knife for XSS Finding on any given URI
-- Any logic is valid logic
+- Swiss knife for XSS on any URI
+- Fuzz / Find
+- Any logic is valid logic in this software
 
 # License
 - EULA
