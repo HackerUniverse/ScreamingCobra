@@ -10,7 +10,7 @@
 
 # Screenshot
 <div align="center">
-    <img src="https://i.ibb.co/GtPKf0k/screamingcobra.png" width="600px"</img> 
+    <img src="https://i.ibb.co/xgSzyKq/screamingcobra.png" width="600px"</img> 
 </div>
 
 # Linux Installation
