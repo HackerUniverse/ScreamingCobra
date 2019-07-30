@@ -57,16 +57,15 @@ def attack(url, payload):
         attack= urllib2.urlopen(url).read()
         index = attack.find(XSS_RESPONSE)
         buffer = 20
-        print_url=url.replace("<","<").replace(">",">")
+        print_url=url.replace("<","<")
         attack = attack.split("\n");
         len(attack)
-        
         if index != -1:
             return_dict[' vulnerability'] = True
-            print colored('[+] ', 'red'), colored('XSS Found: ', 'green')
-            print print_url
             return_dict['vulnerability_data'] = line.strip()
             print colored('[+] ', 'red'), colored('XSS Found: ', 'green'), attack[index-buffer:index+len(XSS_RESPONSE)+buffer]
+            print colored('[+] ', 'red'), colored('XSS Found: ', 'green')
+            print print_url
             intt=intt+1
             print intt
         t_end = time.time()
@@ -76,7 +75,7 @@ def attack(url, payload):
     except Exception, e:
         return_dict['exception'] = str(e)
 
-
+ 
 if __name__ == '__main__':
     # Init
     t_global_start = time.time()
