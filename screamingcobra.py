@@ -8,7 +8,7 @@
 
 
 # Imports
-import html, sys, httplib2, re, requests, urllib2, urlparse, json, time, httplib, cookielib, urllib, httplib, urllib, socket, urlparse, os, sys, time, mechanize 
+import socket, urlparse, html, sys, httplib2, re, requests, urllib2, urlparse, json, time, httplib, cookielib, urllib, httplib, urllib, socket, urlparse, os, sys, time, mechanize
 from threadpool import *
 from termcolor import colored
 
@@ -91,7 +91,8 @@ if __name__ == '__main__':
     payloads_file = open(PAYLOADS_FILENAME)
     threadpool = ThreadPool(MAX_THREAD_COUNT)
     print colored('[+] ', 'red'), colored('Enter Absolute URI:', 'green')
-    sites = str(raw_input("[-]  "))    
+    url = sites = str(raw_input("[-]  "))        
+    urlparse.urlparse('')    
     print colored('[+] ', 'red'), colored('Loaded Parallel Engine', 'green')
     print colored('[+] ', 'red'), colored('Loaded Payloads', 'green')
     print colored('[+] ', 'red'), colored('Performing XSS Tests', 'green')
@@ -131,7 +132,7 @@ if __name__ == '__main__':
             get_params = get_params[:-1]
 
 # Enqueue GET attack
-            get_attack_url = '%s?%s' % (base_url, get_params)
+            get_attack_url = '%s%s' % (base_url, get_params)
             threadpool.enqueue(attack, get_attack_url, payload)
 
 # Wait for threadpool
