@@ -30,19 +30,25 @@ The hash (#) character in a URI denotes the beginning of a URI fragment. Accordi
 - Result: Hello Tim#<script>alert(42)</script>!
 
 
-# Linux Installation
+# Kali Installation
 - chmod u+x Kali_Installer.sh
 - ./Kali_Installer.sh
 - ScreamingCobra
 - ScreamingCobra is now system command, call anywhere in system
 
-# Android Installation
-- pip2 install -e requirements.txt
-- pip2 install httplib2
-- pip2 install mechanize
+# Parrot_OS Installation
+- chmod u+x Parrot_Os_Installer.sh
+- ./Parrot_Os_Installer.sh
+- ScreamingCobra
+- ScreamingCobra is now system command, call anywhere in system
+
+
+# Termux Installation
+- chmod u+x Termux_Installer.sh
+- ./interface.sh
 
 # Compatible
-- Android Led TV, Termux, Linux, Windows
+- Android Led TV, Termux, Linux, Windows using cygwin
 
 # Versions
 - Version 1 is a normal version, could be used any time
