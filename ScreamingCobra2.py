@@ -40,7 +40,7 @@ print colored('[+] ', 'red'), colored('Target Settings', 'white')
 # Configurations
 DEBUG = True
 MAX_THREAD_COUNT = 10
-PAYLOADS_FILENAME = 'payload'
+PAYLOADS_FILENAME = 'dompayload'
 SCHEME_DELIMITER = '://'
 cj = cookielib.CookieJar()
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
