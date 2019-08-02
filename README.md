@@ -31,10 +31,10 @@ The hash (#) character in a URI denotes the beginning of a URI fragment. Accordi
 
 
 # Linux Installation
-- pip install -r requirements.txt 
-- pip install httplib2
-- pip install mechanize
-- pip install Python 2.7
+- chmod u+x Kali_Installer.sh
+- ./Kali_Installer.sh
+- ScreamingCobra
+- ScreamingCobra is now system command, call anywhere in system
 
 # Android Installation
 - pip2 install -e requirements.txt
