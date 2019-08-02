@@ -44,7 +44,7 @@ The hash (#) character in a URI denotes the beginning of a URI fragment. Accordi
 # Compatible
 - Android Led TV, Termux, Linux, Windows
 
-# Version
+# Versions
 - Version 1 is a normal version, could be used any time
 - Version 2 is a Dom case is a special version, should be used only in Dom case
 
