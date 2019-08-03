@@ -34,8 +34,8 @@ echo "                                                                          
 echo "                                                                                               ";
 echo "                                       	  Ultimate XSS Fuzzing and Finding Software     Version 1.0a        ";   
 echo "                                                        [Coded By: Haroon Awan]                                       ";
-echo "                                                   [Contact: mrharoonawan@gmail.com]                                  ";
-echo "                                                                                               ";
+echo "                                                   [Contact: mrharoonawan@gmail.com]  ";
+echo "                                                    [Instagram:hackeruniversee ]                                          ";
 echo "                                                                                               ";
 echo "                                                                                               ";
 }
@@ -67,6 +67,7 @@ echo -e "$red [$green+$red]$off Creating Symbolic Link ...";
 echo -e ""
 python /usr/share/ScreamingCobra/ScreamingCobra1.py > "ScreamingCobra1";
 python /usr/share/ScreamingCobra/ScreamingCobra2.py > "ScreamingCobra2";
+chmod 777 interface.sh
 interface.sh > "ScreamingCobra";
     chmod +x "ScreamingCobra";
     sudo mkdir "/usr/share/ScreamingCobra"
