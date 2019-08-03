@@ -67,6 +67,7 @@ echo -e "$red [$green+$red]$off Creating Symbolic Link ...";
 echo -e ""
 python /usr/share/ScreamingCobra/ScreamingCobra1.py > "ScreamingCobra1";
 python /usr/share/ScreamingCobra/ScreamingCobra2.py > "ScreamingCobra2";
+sudo chmod 777 interface.sh
 interface.sh > "ScreamingCobra";
     chmod +x "ScreamingCobra";
     sudo mkdir "/usr/share/ScreamingCobra"
