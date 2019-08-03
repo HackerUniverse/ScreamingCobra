@@ -26,16 +26,17 @@ echo "XSS Fuzz Swiss Knife on any URI     Version 1.0a";
 echo "Termux Installer By: Haroon Awan";
 echo "Coded By: Haroon Awan";
 echo "Mail: mrharoonawan@gmail.com";
+echo "Debug:Hackeruniversee";
 echo "";
 
 
-echo -e "Installing Python"
-pip install python2.7
+echo -e "Installing Python2"
+apt-get install python2
 
 echo -e "Installing Modules"
-pip install -r requirements.txt
-pip install httplib2
-pip install mechanize
+pip2 install -r requirements.txt
+pip2 install httplib2
+pip2 install mechanize
 
 echo -e "[+] Installed Success!";
 echo -e "[+] Reboot Termux";
